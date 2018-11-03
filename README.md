@@ -1,21 +1,33 @@
 # swiftCalculator
 
-计算器主要代码集中在ViewController.swift中
+Part1 功能说明
+
+欢迎使用swift计算器！！本计算器主要能够实现以下功能：
 
 
-按钮及文本框通过图形界面Main.storyboard创造
+1，支持连续的加减乘除运算，让您的运算更加流畅
 
 
-appIcon区域里面是app的图标
+2，支持记忆以及清除记忆功能，免去您记录数据的繁琐
 
 
-launchScreen区域里面是app的启动界面
+3，小数点缺省自动识别，让您把更多精力放在实实在在的数据上
 
 
-previousCode区域里是对版本更新的说明
+Part2 文件指南
 
 
-PS:因为好久没用git，所以把上传文件夹方法都给忘了。。。
+计算器的核心代码存放在ViewController.swift中
 
 
-   于是乎。。所有文件都是我一个一个拖的，大家凑合着看哈
+按钮及文本框通过Main.storyboard创造
+
+
+appIcon区域存放app的图标
+
+
+launchScreen区域存放app的启动界面
+
+
+previousCode区域内含计算器版本更新的说明
+
