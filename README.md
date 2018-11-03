@@ -1,5 +1,11 @@
 # swiftCalculator
-计算器主要代码集中在ViewController.swift中，按钮及文本框通过图形界面Main.storyboard创造
+
+计算器主要代码集中在ViewController.swift中
+
+
+按钮及文本框通过图形界面Main.storyboard创造
+
+
 appIcon区域里面是app的图标
 
 
