@@ -1,0 +1,196 @@
+//
+//  ViewController.swift
+//  6666666
+//
+//  Created by macos on 2018/10/23.
+//  Copyright © 2018年 macos. All rights reserved.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+    var sort :Int = 0
+    var memory :Double=0.0
+    var number1 :Double = 0.0
+    var number2 :Double = 0.0
+    var number3 :Double = 0.0
+    
+    //=================================================
+    
+     //***********************************************
+    
+    @IBAction func tappedHandler(_ sender: UIButton) { //re1
+        self.oh.text=self.oh.text!+"1"
+    }
+    @IBAction func loginBn(_ sender: UIButton) {  //re2
+        self.oh.text=self.oh.text!+"2"
+    }
+    
+    @IBAction func re3(_ sender: UIButton) {
+        self.oh.text=self.oh.text!+"3"
+    }
+    
+    @IBAction func re4(_ sender: UIButton) {
+        self.oh.text=self.oh.text!+"4"
+    }
+    
+    @IBAction func re5(_ sender: UIButton) {
+        self.oh.text=self.oh.text!+"5"
+    }
+    
+    @IBAction func re6(_ sender: UIButton) {
+        self.oh.text=self.oh.text!+"6"
+    }
+    
+    @IBAction func re7(_ sender: UIButton) {
+        self.oh.text=self.oh.text!+"7"
+    }
+    
+    @IBAction func re8(_ sender: UIButton) {
+        self.oh.text=self.oh.text!+"8"
+    }
+    
+    @IBAction func re9(_ sender: UIButton) {
+        self.oh.text=self.oh.text!+"9"
+    }
+    
+    @IBAction func re0(_ sender: UIButton) {
+        self.oh.text=self.oh.text!+"0"
+    }
+    
+    @IBAction func point(_ sender: UIButton) {
+        self.oh.text=self.oh.text!+"."
+    }
+    //=================================================
+    
+     //**********************************************
+    
+    
+    @IBAction func plus(_ sender: UIButton)
+    {
+        self.number1 = Double((self.oh?.text!)!)!
+        self.sort = 1
+        self.oh.text = ""
+        self.store.text="\(number1) \n +"
+    }
+    
+    @IBAction func minus(_ sender: UIButton) {
+    self.number1 = Double((self.oh.text!))!
+        self.sort = 2
+        self.oh.text = ""
+         self.store.text="\(number1) \n -"
+    }
+    
+    @IBAction func multiply(_ sender: UIButton) {
+    self.number1 = Double((self.oh.text!))!
+        self.sort = 3
+        self.oh.text = ""
+         self.store.text="\(number1) \n *"
+    }
+    
+    @IBAction func divide(_ sender: UIButton) {
+    self.number1 = Double((self.oh.text!))!
+        self.sort = 4
+        self.oh.text = ""
+         self.store.text="\(number1) \n /"
+    }
+    //***********************************************
+    
+     //********************************************
+    
+    @IBAction func AC(_ sender: UIButton) {
+        number1=0.0
+        number2=0.0
+        number3=0.0
+        sort=0
+        self.oh.text=""
+         self.store.text="欢迎使用计算器！！"
+    }
+    
+    @IBAction func backspace(_ sender: UIButton) {
+        if sort==0&&number3==0.0
+        {
+            self.oh.text=""
+        }
+       else if sort>0&&number3==0.0
+        {
+            self.oh.text=""
+        }
+        else
+        {
+            number1=0.0
+            number2=0.0
+            number3=0.0
+            sort=0
+            self.oh.text=""
+            self.store.text="欢迎使用计算器！！"
+        }
+    }
+    @IBAction func Me(_ sender: UIButton) {
+        
+        self.oh.text = "\(memory)                        "
+         self.store.text="欢迎使用计算器！！"
+    }
+    
+    @IBAction func Mc(_ sender: UIButton) {
+        memory=0.0
+        self.oh.text = "\(memory)                        "
+         self.store.text="欢迎使用计算器！！"
+    }
+    
+    @IBAction func result(_ sender: UIButton) {
+    self.number2 = Double((self.oh.text!))!
+         switch self.sort {
+            
+        case 1:
+            self.number3 = number1 + number2
+            memory = number3
+            self.oh.text = "\(number3)"
+             self.store.text="结果是"
+        case 2:
+            self.number3 = number1 - number2
+            memory = number3
+            self.oh.text = "\(number3)"
+             self.store.text="结果是"
+        case 3:
+            self.number3 = number1 * number2
+            memory = number3
+            self.oh.text = "\(number3)"
+            self.store.text="结果是"
+        case 4:
+            self.number3 = number1 / number2
+            memory = number3
+            self.oh.text = "\(number3)"
+            self.store.text="结果是"
+        default:
+            self.oh.text = "你搞错了！"
+            self.store.text="友情提醒"
+        }
+        
+        
+    }
+    
+    
+    @IBAction func esc(_ sender: UIButton) {
+        self.oh.text = "在AC状态下按="
+        self.store.text = "退出程序的方法："
+    }
+    
+    @IBOutlet weak var oh: UILabel!
+    
+    @IBOutlet weak var store: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print("界面设计文件加载完成")
+
+       self.store.text="欢迎使用计算器!!"
+        self.oh.text = ""
+        
+        
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    
+}
+
