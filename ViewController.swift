@@ -17,9 +17,6 @@ class ViewController: UIViewController {
     var pointExist :Int = 0       //判断之前是否存在小数点
     var touchState :Int = 0       //判断当前按键种类
     
-//====================================================================================================
-    
-//****************************************************************************************************
     
 //============================下面对数字控制按钮进行处理===========================================
     
@@ -92,9 +89,6 @@ class ViewController: UIViewController {
         {self.oh.text = self.oh.text!+"."}
         touchState = 0
     }
-//==================================================================================================
-    
-//***************************************************************************************************
     
 //==========================下面对运算符按钮进行处理===========================================
     
@@ -276,9 +270,6 @@ class ViewController: UIViewController {
     }
         touchState = 4
 }
-//=============================================================================================
-    
-//**********************************************************************************************
 
 //=========================下面处理一些命令按钮===========================================
     
@@ -347,22 +338,22 @@ class ViewController: UIViewController {
         case 1:
             self.number3 = number1 + number2
             memory = number3
-            self.oh.text = "\(number3)"
+            if (number3 != "Nan") {self.oh.text = "\(number3)"}
              self.store.text="结果是"
         case 2:
             self.number3 = number1 - number2
             memory = number3
-            self.oh.text = "\(number3)"
+            if (number3 != "Nan") {self.oh.text = "\(number3)"}
              self.store.text="结果是"
         case 3:
             self.number3 = number1 * number2
             memory = number3
-            self.oh.text = "\(number3)"
+            if (number3 != "Nan") {self.oh.text = "\(number3)"}
             self.store.text = "结果是"
         case 4:
             self.number3 = number1 / number2
             memory = number3
-            self.oh.text = "\(number3)"
+            if (number3 != "Nan") {self.oh.text = "\(number3)"}
             self.store.text = "结果是"
         default:
             self.oh.text = "你搞错了！"
